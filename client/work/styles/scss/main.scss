@@ -1,0 +1,216 @@
+$bg-header:#FF8B55;
+$bg-hover-menu:#FF7055;
+$bg-menu:#d9faa2;
+$height-menu:35px;
+
+$width-container:1200px;
+$width-content:1000px;
+$height-content:750px;
+$shadow-content:0 5px 10px rgba(0,0,0,.5);
+
+$width-slide:100%;
+$height-slide:350px;
+.clearFloat{
+  content: '';
+  display: block;
+  clear: both;
+}
+//reset
+*{
+  box-sizing: border-box;
+}
+
+html,body{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: rgb(193, 0, 0);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+// config link
+a:link{
+  //default link stlye
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  // linker hover ....
+  color:red !important;
+}
+a:visited{
+  color:white;
+  // style after people click  link
+}
+a:active{
+  color:white;
+  // style people active link
+}
+
+.button{
+  cursor: pointer;
+}
+.container{
+  width: $width-container;
+  margin: auto;
+}
+.header{
+  height: 70px;
+  background: $bg-header;
+  position: relative;
+  .logo{
+    width: 200px;
+    height: 70px;
+    background: #FADAA3;
+  }
+  .submenu{
+    width: 400px;
+    height: 35px;
+    position: absolute;
+    top:0;
+    right: 0;
+    li{
+      list-style-type: none;
+      width: 200px;
+      display: inline-block;
+      background: rgb(55, 143, 158);
+      margin-right: -5px;
+      line-height: $height-menu;
+      height: $height-menu;
+    }
+  }
+  .menu-mobile{
+    display: none;
+    position: absolute;
+    line-height: $height-menu;
+    height: $height-menu;
+    right: 0;
+    bottom:0;
+  }
+  .menu{
+    position: absolute;
+    right:0;
+    width: calc(100% - 200px);// 100% - logo
+    bottom:0;
+    background-color:$bg-menu;
+    li{
+      list-style-type: none;
+      display: inline-block;
+      margin-right: -5px;
+      line-height: $height-menu;
+      height: $height-menu;
+      padding-left: 15px;
+      padding-right: 15px;
+      &:hover{
+        background: $bg-hover-menu;
+      }
+    }
+  }
+}
+
+.slide{
+  position: relative;
+  width: $width-slide;
+  margin: auto;
+  height: $height-slide;
+  background: rgb(255, 125, 102);
+  .nav{
+    position: absolute;
+    top:50px;
+    width: 50px;
+    height:200px;
+    background: rgb(252, 188, 87);
+    &.left{
+      left:0;
+    }
+    &.right{
+      right: 0;
+    }
+  }
+
+}
+.content{
+  display: table;
+  width: $width-content;
+  background: rgb(222, 56, 20);
+  margin: auto;
+  height: $height-content;
+  box-shadow: $shadow-content;
+  .row{
+    .col{
+      width: $width-content/3;
+      float:left;
+      background: white;
+    }
+    &:after{
+      @extend .clearFloat;
+    }
+  }
+}
+
+$width-col1-container-item:$width-content/3;
+$width-col1-item:$width-col1-container-item / 2;
+$mar-detail-col1:10px;
+$height-item-col1:200px;
+.detail-col1,.detail-col2{
+  height:750px;
+}
+.detail-col1{
+  width: 100%;
+  .title{
+    width: auto;
+    height: 35px;
+    line-height: 35px;
+    background: red;
+    margin: $mar-detail-col1;
+  }
+  .container-item{
+    width:100%;
+    margin: auto;
+    .item{
+      width: calc(50% - 20px);
+      background: rgb(231, 124, 66);
+      float: left;
+      margin: $mar-detail-col1;
+      height: $height-item-col1;
+    }
+    &:after{
+      @extend .clearFloat;
+    }
+  }
+}
+
+
+.detail-col2{
+  width: 100%;
+  .item{
+    height: 250px;
+    background: white;
+    border: 1px solid #999999;
+  }
+}
+
+.how-to-play{
+  width: 100%;
+  height: 350px;
+  background-color: rgb(32, 128, 255);
+}
+
+.bottom-menu{
+    height: 100px;
+    text-align: center;
+    position: relative;
+    .container-item{
+      width: 100%;
+      position: absolute;
+      bottom:10px;
+    }
+}
+.footer{
+  width: 100%;
+  height: 350px;
+  background-color: rgb(54, 198, 74);
+}
+
+@import './media.scss';
