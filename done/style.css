@@ -1,0 +1,211 @@
+*,
+html, body,
+body,
+.button,
+.container,
+.header,
+.header .logo,
+.header .submenu,
+.header .submenu li,
+.header .menu-mobile,
+.header .menu,
+.header .menu li,
+.slide,
+.slide .nav,
+.slide .nav.left,
+.slide .nav.right,
+.content,
+.content .row .col,
+.detail-col1, .detail-col2,
+.detail-col1,
+.detail-col1 .title,
+.detail-col1 .container-item,
+.detail-col1 .container-item .item,
+.detail-col2,
+.detail-col2 .item,
+.how-to-play,
+.bottom-menu,
+.bottom-menu .container-item,
+.footer,
+.content .row {
+  all: initial; }
+
+.clearFloat, .content .row:after, .detail-col1 .container-item:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #c10000;
+  font-family: Helvetica, Arial, sans-serif; }
+
+a:link {
+  color: white;
+  text-decoration: none; }
+
+a:hover {
+  color: red !important; }
+
+a:visited {
+  color: white; }
+
+a:active {
+  color: white; }
+
+.button {
+  cursor: pointer; }
+
+.container {
+  width: 1200px;
+  margin: auto; }
+
+.header {
+  height: 70px;
+  background: #FF8B55;
+  position: relative; }
+  .header .logo {
+    width: 200px;
+    height: 70px;
+    background: #FADAA3; }
+  .header .submenu {
+    width: 400px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .header .submenu li {
+      list-style-type: none;
+      width: 200px;
+      display: inline-block;
+      background: #378f9e;
+      margin-right: -5px;
+      line-height: 35px;
+      height: 35px; }
+  .header .menu-mobile {
+    display: none;
+    position: absolute;
+    line-height: 35px;
+    height: 35px;
+    right: 0;
+    bottom: 0; }
+  .header .menu {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 200px);
+    bottom: 0;
+    background-color: #d9faa2; }
+    .header .menu li {
+      list-style-type: none;
+      display: inline-block;
+      margin-right: -5px;
+      line-height: 35px;
+      height: 35px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      .header .menu li:hover {
+        background: #FF7055; }
+
+.slide {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height: 350px;
+  background: #ff7d66; }
+  .slide .nav {
+    position: absolute;
+    top: 50px;
+    width: 50px;
+    height: 200px;
+    background: #fcbc57; }
+    .slide .nav.left {
+      left: 0; }
+    .slide .nav.right {
+      right: 0; }
+
+.content {
+  display: table;
+  width: 1000px;
+  background: #de3814;
+  margin: auto;
+  height: 750px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
+  .content .row .col {
+    width: 333.33333px;
+    float: left;
+    background: white; }
+
+.detail-col1, .detail-col2 {
+  height: 750px; }
+
+.detail-col1 {
+  width: 100%; }
+  .detail-col1 .title {
+    width: auto;
+    height: 35px;
+    line-height: 35px;
+    background: red;
+    margin: 10px; }
+  .detail-col1 .container-item {
+    width: 100%;
+    margin: auto; }
+    .detail-col1 .container-item .item {
+      width: calc(50% - 20px);
+      background: #e77c42;
+      float: left;
+      margin: 10px;
+      height: 200px; }
+
+.detail-col2 {
+  width: 100%; }
+  .detail-col2 .item {
+    height: 250px;
+    background: white;
+    border: 1px solid #999999; }
+
+.how-to-play {
+  width: 100%;
+  height: 350px;
+  background-color: #2080ff; }
+
+.bottom-menu {
+  height: 100px;
+  text-align: center;
+  position: relative; }
+  .bottom-menu .container-item {
+    width: 100%;
+    position: absolute;
+    bottom: 10px; }
+
+.footer {
+  width: 100%;
+  height: 350px;
+  background-color: #36c64a; }
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100%; }
+  .header .menu {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 99999; }
+    .header .menu li {
+      display: block; }
+  .header .menu-mobile {
+    display: block; }
+  .content {
+    width: 100%; }
+    .content .row {
+      margin: auto; }
+      .content .row .col {
+        width: 100%;
+        display: inline-block; } }
